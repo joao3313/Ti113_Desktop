@@ -1,56 +1,43 @@
 ﻿namespace DiaSemana
 {
-    using System;
 
-    class Program
+    internal class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            while (true)
+            Console.WriteLine("Informe um número de 1 a 7 para exibir o Dia da Semana");
+            string opcao = Console.ReadLine()!;
+
+            switch (opcao)
             {
-                Console.Clear();
-                Console.Write("Digite seu nome: ");
-                string nome = Console.ReadLine()?.Trim();
-
-                while (string.IsNullOrWhiteSpace(nome))
-                {
-                    Console.Write("Nome inválido. Digite seu nome: ");
-                    nome = Console.ReadLine()?.Trim();
-                }
-
-                int numero;
-                do
-                {
-                    Console.Write("Digite um número de 1 a 7: ");
-                } while (!int.TryParse(Console.ReadLine(), out numero) || numero < 1 || numero > 7);
-
-                string[] diasSemana = { "Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado" };
-
-                Console.WriteLine($"\nOlá {nome}, o dia correspondente ao número {numero} é {diasSemana[numero - 1]}.");
-
-                string resposta;
-                do
-                {
-                    Console.Write("\nDeseja continuar? (sim/nao): ");
-                    resposta = Console.ReadLine().ToLower();
-
-                    // Garante que a resposta seja "S" ou "N"
-                    if (resposta != "S" && resposta != "N")
-                    {
-                        Console.WriteLine("Resposta inválida! Por favor, digite 'S' para sim ou 'N' para não.");
-                    }
-
-                } while (resposta != "s" && resposta != "n");
-
-
-
-                if (resposta == "nao")
-                {
-                    Console.WriteLine("\nPrograma encerrado. Pressione qualquer tecla para sair...");
-                    Console.ReadKey();
+                case "1":
+                    Console.WriteLine("Domingo");
                     break;
-                }
+                case "2":
+                    Console.WriteLine("Segunda-feira");
+                    break;
+                case "3":
+                    Console.WriteLine("Terça-feira");
+                    break;
+                case "4":
+                    Console.WriteLine("Quarta-feira");
+                    break;
+                case "5":
+                    Console.WriteLine("Quinta-feira");
+                    break;
+                case "6":
+                    Console.WriteLine("Sexta-feira");
+                    break;
+                case "7":
+                    Console.WriteLine("Sábado");
+                    break;
+                default:
+                    Console.WriteLine("Dia Inválido");
+                    break;
             }
+
+
+
         }
     }
 }
