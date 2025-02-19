@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculadora", "Calculadora\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NomeSenha", "NomeSenha\NomeSenha.csproj", "{B7139F60-7B53-4876-8FE3-763DC9FC82AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeradorTabuada", "GeradorTabuada\GeradorTabuada.csproj", "{F332EC66-931F-4711-B7BA-3E383D85C6E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{B7139F60-7B53-4876-8FE3-763DC9FC82AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7139F60-7B53-4876-8FE3-763DC9FC82AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7139F60-7B53-4876-8FE3-763DC9FC82AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F332EC66-931F-4711-B7BA-3E383D85C6E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F332EC66-931F-4711-B7BA-3E383D85C6E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F332EC66-931F-4711-B7BA-3E383D85C6E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F332EC66-931F-4711-B7BA-3E383D85C6E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
