@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RendaMes", "RendaMes\RendaM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NomePreco", "NomePreco\NomePreco.csproj", "{56F90A4E-7EC7-4E42-9658-80143448C05E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculadora", "Calculadora\Calculadora.csproj", "{9D4B2EF7-AAB9-456B-AE03-3E909BBAD1C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{56F90A4E-7EC7-4E42-9658-80143448C05E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56F90A4E-7EC7-4E42-9658-80143448C05E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56F90A4E-7EC7-4E42-9658-80143448C05E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D4B2EF7-AAB9-456B-AE03-3E909BBAD1C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D4B2EF7-AAB9-456B-AE03-3E909BBAD1C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D4B2EF7-AAB9-456B-AE03-3E909BBAD1C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D4B2EF7-AAB9-456B-AE03-3E909BBAD1C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
