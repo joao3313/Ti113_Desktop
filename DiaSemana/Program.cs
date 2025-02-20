@@ -7,7 +7,7 @@
         {
             Console.WriteLine("Informe um número de 1 a 7 para exibir o Dia da Semana");
             string opcao = Console.ReadLine()!;
-
+            
             switch (opcao)
             {
                 case "1":
