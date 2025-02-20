@@ -13,36 +13,41 @@
                 Console.WriteLine("2 - Subtração");
                 Console.WriteLine("3 - Multiplicação");
                 Console.WriteLine("4 - Divisão");
-                Console.WriteLine("5 - Sair");
+                Console.WriteLine("5 - Potenciação");
+                Console.WriteLine("6 - Radiciação");
+                Console.WriteLine("7 - Sair");
                 Console.Write("Escolha uma opção: ");
 
                 int opcao;
-                while (!int.TryParse(Console.ReadLine(), out opcao) || opcao < 1 || opcao > 5)
+                while (!int.TryParse(Console.ReadLine(), out opcao) || opcao < 1 || opcao > 7)
                 {
                     Console.Write("Opção inválida. Escolha novamente: ");
                 }
 
-                if (opcao == 5)
+                if (opcao == 7)
                 {
                     Console.WriteLine("Saindo da calculadora...");
                     break;
                 }
 
                 Console.Write("Digite o primeiro número: ");
-                decimal num1;
-                while (!decimal.TryParse(Console.ReadLine(), out num1))
+                double num1;
+                while (!double.TryParse(Console.ReadLine(), out num1))
                 {
                     Console.Write("Valor inválido. Digite novamente: ");
                 }
 
-                Console.Write("Digite o segundo número: ");
-                decimal num2;
-                while (!decimal.TryParse(Console.ReadLine(), out num2) || (opcao == 4 && num2 == 0))
+                double num2 = 0;
+                if (opcao != 6)
                 {
-                    Console.Write("Valor inválido ou divisão por zero. Digite novamente: ");
+                    Console.Write("Digite o segundo número: ");
+                    while (!double.TryParse(Console.ReadLine(), out num2) || (opcao == 4 && num2 == 0))
+                    {
+                        Console.Write("Valor inválido ou divisão por zero. Digite novamente: ");
+                    }
                 }
 
-                decimal resultado = 0;
+                double resultado = 0;
 
                 switch (opcao)
                 {
@@ -58,9 +63,20 @@
                     case 4:
                         resultado = num1 / num2;
                         break;
+                    case 5:
+                        resultado = Math.Pow(num1, num2);
+                        break;
+                    case 6:
+                        if (num1 < 0)
+                        {
+                            Console.WriteLine("Não é possível calcular a raiz de um número negativo.");
+                            continue;
+                        }
+                        resultado = Math.Sqrt(num1);
+                        break;
                 }
 
-                Console.WriteLine($"O resultado da operação é: {resultado:F0}\n");
+                Console.WriteLine($"O resultado da operação é: {resultado:F2}\n");
 
                 Console.Write("Deseja continuar? (S/N): ");
                 string resposta = Console.ReadLine().Trim().ToUpper();
@@ -72,5 +88,4 @@
             }
         }
     }
-
 }
